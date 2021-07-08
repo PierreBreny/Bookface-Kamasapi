@@ -16,6 +16,19 @@ password :{
 date :{
     type : Date,
     default : Date.now
+} ,
+firstName :{
+    type  : String,
+    required : true
+} ,
+birthday:{
+    type  : String,
+    required : true
+},
+
+gender:{
+    type  : String,
+    required : true
 }
 });
 const User= mongoose.model('User',UserSchema);

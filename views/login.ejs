@@ -1,23 +1,25 @@
-<h1> Login </h1>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
 <%- include ('./partials/messages') %>
-<form action="/users/login" method="POST">
-<div>
-<label for="email">Email</label>
-<input
-type="email"
-name="email"
-placeholder="Enter Email"
-/>
+
+<div class="wrapper">
+  <div class="container">
+
+  <h1>Login</h1>
+
+  <form action="/users/login" method="POST" class="form">
+
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" placeholder="Enter Email" />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Enter Password" />
+    </div>
+    <button type="submit" id="login-button">Login</button>
+  </form>
+
+  <a href="/users/welcome">Go welcome page</a>
 </div>
-<div>
-    <label for="password">Password</label>
-    <input
-      type="password"
-      name="password"
-      placeholder="Enter Password"
-    />
-  
 </div>
-<button type="submit" class="btn btn-primary btn-block">Login</button>
-   
-</form>
