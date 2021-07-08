@@ -10,6 +10,9 @@ const passport = require('passport');
 
 require('./config/passport')(passport)
 
+//css
+app.use("/static", express.static("public"));
+
 //atlas
 const dotenv = require('dotenv');
 dotenv.config();
