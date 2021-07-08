@@ -1,0 +1,210 @@
+html {
+  background-color: #edf4f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.imageContainer {
+  display: flex;
+}
+
+.main-container {
+  min-height: 100vh;
+  background-color: #ecf4f3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Rubik", sans-serif;
+  /* font-family: 'Catamaran', sans-serif; */
+  font-size: 13px;
+}
+
+/* Register link*/
+.main-container a {
+  text-decoration: none;
+  color: #686b72;
+}
+
+/* Login Box */
+.main-container .login-wrapper {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 172px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 172px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 172px 6px rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  max-width: 900px;
+  min-height: 520px;
+  display: flex;
+}
+
+/* Login Box Header Flex */
+.main-container .login-wrapper .form-wrapper .form-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  padding: 15px;
+  margin-top: 15px;
+
+  font-weight: 900;
+}
+
+/* Padding */
+.main-container .login-wrapper .form-wrapper .form-container {
+  padding: 0px 60px;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form-messages {
+  text-align: left;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form-messages h2 {
+  margin-bottom: 15px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form input {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #eeeeee;
+  border: none;
+  padding: 10px;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form input:focus {
+  outline: 2px solid #4694a8;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .form a {
+  display: block;
+}
+
+.main-container
+  .login-wrapper
+  .form-wrapper
+  .form-container
+  .form
+  .forgot-pass {
+  text-align: right;
+  font-weight: 900;
+}
+
+.main-container
+  .login-wrapper
+  .form-wrapper
+  .form-container
+  .form
+  .login-button {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #4694a8;
+  color: #fff;
+  text-align: center;
+}
+
+/* fghj */
+.main-container .login-wrapper .form-wrapper .form-container .separator {
+  border: 2px solid #e8e9ea;
+  margin-bottom: 35px;
+}
+
+/* ertyhj */
+.main-container .login-wrapper .form-wrapper .form-container .logoImg {
+  margin: 20px 20px;
+  text-align: center;
+}
+
+img {
+  width: 15%;
+  min-width: 40px;
+}
+.brandName {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(64, 64, 64);
+  margin-top: 0;
+}
+
+.main-container
+  .login-wrapper
+  .form-wrapper
+  .form-container
+  .logoImg
+  .login-text {
+  margin-bottom: 15px;
+}
+
+.main-container .login-wrapper .form-wrapper .form-container .login-icons {
+  font-size: 20px;
+}
+
+.main-container
+  .login-wrapper
+  .form-wrapper
+  .form-container
+  .login-icons
+  .fa-facebook-square,
+.main-container
+  .login-wrapper
+  .form-wrapper
+  .form-container
+  .login-icons
+  .fa-google,
+.main-container
+  .login-wrapper
+  .form-wrapper
+  .form-container
+  .login-icons
+  .fa-twitter {
+  color: #4694a8;
+  padding: 0px 10px;
+}
+
+/* dfgh */
+
+.main-container .image-wrapper {
+  background: url("https://unsplash.com/photos/tXiMrX3Gc-g/download?force=true");
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main-container .image-wrapper .image-message {
+  color: #fff;
+  line-height: 20px;
+
+  padding: 50px 70px 70px 40px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container .image-wrapper .image-message .image-hr-container {
+  margin: 5px 20px;
+}
+
+.main-container .image-wrapper .image-message .image-hr-container .image-hr {
+  border: 1px solid #e8e9ea;
+  min-width: 30px;
+}
+
+.main-container .image-wrapper .image-message .image-text h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}

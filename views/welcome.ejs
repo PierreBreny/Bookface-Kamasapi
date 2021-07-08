@@ -1,6 +1,82 @@
-<html>
-<h1>Welcome!</h1>
-<p>Create an account or login</p>
-<a href="/users/register">Register</a>
-<a href="/users/login"> Login</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/stylesheets/welcome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="static/stylesheets/logo.png">
+    <title>Kawasapi</title>
+</head>
+<body>
+    <section>
+        <article class="main-container">
+          
+          <div class="login-wrapper">
+
+            <!-- White Box Login side content -->
+            <section class="form-wrapper">
+      
+              <!-- Header with Register link -->
+              <header class="form-header">
+
+                <a href="/register" class="register-link gray">Register</a>
+      
+              </header>
+      
+              <!-- Login Form -->
+              <div class="form-container">
+      
+                <!-- Form Text -->
+                <div class="form-messages">
+                  <h2>Login</h2>
+                  <p>Welcome! Please, fill username and password to sign in into your account.</p>
+                </div>
+      
+                <!-- Form -->
+                <form action="fakeurl.php" class="form">
+                  <input type="email" name="user-email" id="user-email" placeholder="Type your email">
+                  <input type="password" name="user-password" id="user-password" placeholder="Type your password">
+                  <a href="#" class="login-button">Login Now</a>
+                </form>
+      
+                <!-- Break line -->
+                <hr class="separator">
+      
+                <!-- Logo & Brand name -->
+                <div class="logoImg">
+      
+                  <img src="/static/stylesheets/logo.png" alt="">
+                  <p class="brandName">Kawasapi</p>
+      
+                </div>
+      
+              </div>
+      
+            </section>
+      
+            <!-- Image Box right side-->
+            <section class="image-wrapper">
+      
+              <div class="image-message">
+      
+                <div class="image-hr-container">
+                  <hr class="image-hr">
+                </div>
+      
+                <div class="image-text">
+                  <h2>Start your journey!</h2>
+                  <p>Connect with your friends and share your amazing stories to the world!</p>
+                </div>
+      
+              </div>
+      
+            </section>
+          </div>
+        </article>
+      </section>
+</body>
 </html>
