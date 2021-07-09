@@ -3,8 +3,6 @@ const router  = express.Router();
 const {ensureAuthenticated} = require("../config/auth.js");
 const User = require("../models/user");
 
- 
-
 //login page
 router.get('/', (req,res)=>{
     res.render('welcome');
