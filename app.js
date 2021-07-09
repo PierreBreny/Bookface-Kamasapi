@@ -56,6 +56,7 @@ app.use('/users',require('./routes/users'));
 
 
 
+
 app.use("/static", express.static("public"));
 
 
@@ -83,4 +84,4 @@ app.use("/static", express.static("public"));
 
 
 
-app.listen(3000); 
+app.listen(3000);
