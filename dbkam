@@ -1,0 +1,21 @@
+DB_CONNECT = mongodb+srv://kamys9:muse1990@cluster0.z5ahr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+db.users.insert()
+
+db.testcollection.insert({["articles": ["Author":"Victor Hugo", "title":"blabla", "content":"blablablablablalbbalbalbalbalalb" ]]})
+
+db.testcollection.insertMany({["articles": ["Author":"Victor Hugo", "title":"blabla", "content":"blablablablablalbbalbalbalbalalb" ]]})
+
+object:
+db.testcollection.insert({"articles": {"author":"Victor Hugo", "title":"blabla", "content":"blablablabla", "date":"07.02.2040"}})
+
+Array-object
+db.testcollection.insert({"articles": ["author":"Victor Hugo", "title":"blabla", "content":"blablablabla", "date":"07.02.2040"] })
+
+
+db.posts.insert({"articles": {"author":"Victor Hugo", "title":"blabla", "content":"blablablabla", "date":"07.02.2040"}})
+
+
+
+db.articles.insert({"author":"user_id", "date": "0123456", "title":"title", "content":"content"})
+
