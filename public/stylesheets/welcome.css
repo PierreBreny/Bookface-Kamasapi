@@ -84,7 +84,7 @@ html {
   outline: 2px solid #4694a8;
 }
 
-.main-container .login-wrapper .form-wrapper .form-container .form a {
+.main-container .login-wrapper .form-wrapper .form-container .form button {
   display: block;
 }
 
@@ -107,10 +107,12 @@ html {
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 10px;
+  border: none;
   border-radius: 50px;
   background-color: #4694a8;
   color: #fff;
   text-align: center;
+  width: 100%;
 }
 
 /* fghj */
