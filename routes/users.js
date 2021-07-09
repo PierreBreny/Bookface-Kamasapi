@@ -9,6 +9,9 @@ const passport = require('passport');
 router.get('/login',(req,res)=>{
     res.render('login');
 })
+router.get('/welcome',(req,res)=>{
+    res.render('welcome');
+})
 router.get('/register',(req,res)=>{
     res.render('register')
     })
@@ -22,10 +25,10 @@ router.post('/login', (req, res, next) => {
   });
   //register post handle
   router.post('/register',(req,res)=>{
-    const {name,email, password, password2} = req.body;
+    const {name,firstName,birthday,gender,email, password, password2} = req.body;
     let errors = [];
-    console.log(' Name ' + name+ ' email :' + email+ ' pass:' + password);
-    if(!name || !email || !password || !password2) {
+    console.log(' Name: ' + name + ' Birthday: ' + birthday + ' First name: '+ firstName + ' Gender: '+ gender +' email: ' + email+ ' pass: ' + password);
+    if(!name || !firstName || !gender || !birthday || !email || !password || !password2) {
         errors.push({msg : "Please fill in all fields"})
     }
     //check if match
@@ -41,6 +44,9 @@ router.post('/login', (req, res, next) => {
     res.render('register', {
         errors : errors,
         name : name,
+        firstName : firstName,
+        birthday : birthday,
+        gender : gender,
         email : email,
         password : password,
         password2 : password2})
@@ -50,10 +56,13 @@ router.post('/login', (req, res, next) => {
         console.log(user);   
         if(user) {
             errors.push({msg: 'email already registered'});
-            res.render('register',{errors,name,email,password,password2})  
+            res.render('register',{errors,name,firstName,birthday,email,gender,password,password2})  
            } else {
             const newUser = new User({
                 name : name,
+                firstName : firstName,
+                birthday : birthday,
+                gender : gender,
                 email : email,
                 password : password
             });
@@ -71,7 +80,7 @@ router.post('/login', (req, res, next) => {
                         console.log(value)
                         req.flash('success_msg','You have now registered!')
 
-                    res.redirect('/users/login');
+                    res.redirect('/');
                     })
                     .catch(value=> console.log(value));
                       
@@ -85,5 +94,9 @@ router.get('/logout',(req,res)=>{
     req.logout();
 req.flash('success_msg','Now logged out');
 res.redirect('/users/login');
- })
+ });
+
+ //User profile
+ 
+
 module.exports  = router;

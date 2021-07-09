@@ -11,6 +11,9 @@ const Post = require("./models/posts");
 
 require('./config/passport')(passport)
 
+//css
+app.use("/static", express.static("public"));
+
 //atlas
 const dotenv = require('dotenv');
 dotenv.config();
@@ -53,8 +56,6 @@ app.use('/users',require('./routes/users'));
 
 
 
-// app.use(express.json());
-// mongoose.connect("mongodb+srv://kamys9:kamasapi123@cluster0.z5ahr.mongodb.net/test", {useNewUrlParser: true}, { useUnifiedTopology: true});
 app.use("/static", express.static("public"));
 
 
@@ -81,4 +82,5 @@ app.use("/static", express.static("public"));
   })
 
 
-app.listen(4000); 
+
+app.listen(3000); 
