@@ -60,6 +60,13 @@
   border: none;
   padding: 10px;
 }
+.main-container .login-wrapper .form-wrapper .form-container .form textarea {
+  /* width: 100%; */
+  margin-bottom: 15px;
+  background-color: #eeeeee;
+  border: none;
+  padding: 10px;
+}
 #name input {
   width: 100%;
 }
@@ -76,6 +83,13 @@
   width: 100%;
 }
 #password2 input {
+  width: 100%;
+}
+#city input {
+  margin-top: 10px;
+  width: 100%;
+}
+#bio textarea{
   width: 100%;
 }
 

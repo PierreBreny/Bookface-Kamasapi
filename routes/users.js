@@ -25,10 +25,10 @@ router.post('/login', (req, res, next) => {
   });
   //register post handle
   router.post('/register',(req,res)=>{
-    const {name,firstName,birthday,gender,email, password, password2} = req.body;
+    const {name,firstName,birthday,gender,email, password, password2,country,city,bio} = req.body;
     let errors = [];
-    console.log(' Name: ' + name + ' Birthday: ' + birthday + ' First name: '+ firstName + ' Gender: '+ gender +' email: ' + email+ ' pass: ' + password);
-    if(!name || !firstName || !gender || !birthday || !email || !password || !password2) {
+    console.log(' Name: ' + name + ' Birthday: ' + birthday + ' First name: '+ firstName + ' Gender: '+ gender +' email: ' + email+ ' pass: ' + password+ ' Country: '+ country + ' city: '+city);
+    if(!name || !firstName || !gender || !birthday || !email || !password || !password2 || !country ||!city||!bio) {
         errors.push({msg : "Please fill in all fields"})
     }
     //check if match
@@ -48,6 +48,9 @@ router.post('/login', (req, res, next) => {
         birthday : birthday,
         gender : gender,
         email : email,
+        country :country,
+        city:city,
+        bio:bio,
         password : password,
         password2 : password2})
      } else {
@@ -56,7 +59,7 @@ router.post('/login', (req, res, next) => {
         console.log(user);   
         if(user) {
             errors.push({msg: 'email already registered'});
-            res.render('register',{errors,name,firstName,birthday,email,gender,password,password2})  
+            res.render('register',{errors,name,firstName,birthday,email,gender,password,password2,country,city,bio})  
            } else {
             const newUser = new User({
                 name : name,
@@ -64,7 +67,10 @@ router.post('/login', (req, res, next) => {
                 birthday : birthday,
                 gender : gender,
                 email : email,
-                password : password
+                password : password,
+                country: country,
+                city:city,
+                bio:bio
             });
     
             //hash password
