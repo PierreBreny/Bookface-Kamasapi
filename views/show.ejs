@@ -14,7 +14,8 @@
     <div class="container">
         <div class="profile-header">
           <div class="profile-img">
-            <img src="./bg.jpg" width="200" alt="Profile Image">
+            <img src="/static/images/logo.png" class='logo-icon' alt="">
+            <!-- <p class="kamasapi">KAMASAPI</p> -->
           </div>
           <div class="profile-nav-info">
             <h3 class="user-name"><%= user.name +' '+ user.firstName %></h3>
@@ -44,11 +45,11 @@
                 </p>
               </div>
               <div class="profile-btn">
-                <button class="chatbtn" id="chatBtn"><i class="fa fa-comment"></i> Chat</button>
+                <button class="chatbtn" id="chatBtn"> <a class = "gohall" href="/hall"><i class="fa fa-comment"></i> Timeline</a></button>
                 <button class="createbtn" id="Create-post"><i class="fa fa-plus"></i> Create</button>
               </div>
               <div class="user-rating">
-                <h3 class="rating">4.5</h3>
+                <!-- <h3 class="rating">4.5</h3> -->
                 <div class="rate">
                   <div class="star-outer">
                     <div class="star-inner">
@@ -59,7 +60,7 @@
                       <i class="fa fa-star"></i>
                     </div>
                   </div>
-                  <span class="no-of-user-rate"><span>123</span>&nbsp;&nbsp;reviews</span>
+                  <!-- <span class="no-of-user-rate"><span>123</span>&nbsp;&nbsp;reviews</span> -->
                 </div>
       
               </div>
@@ -71,7 +72,7 @@
             <div class="nav">
               <ul>
                 <li onclick="tabs(0)" class="user-post active">Posts</li>
-                <li onclick="tabs(1)" class="user-review">Reviews</li>
+                <li onclick="tabs(1)" class="user-review">Message</li>
                 <li onclick="tabs(2)" class="user-setting"> Settings</li>
               </ul>
             </div>
@@ -103,8 +104,9 @@
    
    
    
-    <div class="goback">
+    <!-- <div class="goback">
         <a href="/dashboard">Go to your dashboard page</a>
     </div>
-</body>
+</body> -->
+
 </html>
