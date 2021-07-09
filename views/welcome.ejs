@@ -13,6 +13,7 @@
 </head>
 <body>
     <section>
+      <!-- <%- include ('./partials/messages') %> -->
         <article class="main-container">
           
           <div class="login-wrapper">
@@ -37,10 +38,16 @@
                 </div>
       
                 <!-- Form -->
-                <form action="fakeurl.php" class="form">
-                  <input type="email" name="user-email" id="user-email" placeholder="Type your email">
-                  <input type="password" name="user-password" id="user-password" placeholder="Type your password">
-                  <a href="#" class="login-button">Login Now</a>
+                <form action="/users/login" method="POST" class="form">
+                  <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Enter Email" />
+                  </div>
+                  <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Enter Password" />
+                  </div>
+                  <button type="submit" id="login-button">Login</button>
                 </form>
       
                 <!-- Break line -->
