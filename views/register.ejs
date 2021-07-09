@@ -9,6 +9,11 @@
       type="text/css"
       href="/static/stylesheets/register.css"
     />
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"> 
+    
+  
+    
+    </script>
     <title>Document</title>
   </head>
 
@@ -66,7 +71,7 @@
                 <input type="radio" name="gender" value="Non-binary" id="nonBinary" />
                 <label for="gender">Non binary</label>
               </div>
-
+  
               <div id="email">
                 <label for="email"></label>
                 <input
@@ -99,7 +104,7 @@
                   value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
                 />
               </div>
-
+             
               <div>
                 <button type="submit" class="register-button">Register</button>
                 <hr class="separator" />
@@ -131,5 +136,7 @@
         </section>
       </div>
     </article>
+
+   
   </body>
 </html>
