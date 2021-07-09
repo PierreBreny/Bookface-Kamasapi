@@ -29,6 +29,18 @@ birthday:{
 gender:{
     type  : String,
     required : true
+},
+country:{
+    type : String,
+    required : true
+},
+city:{
+    type:String,
+    required : true
+},
+bio:{type:String,
+    required : true
+    
 }
 });
 const User= mongoose.model('User',UserSchema);
