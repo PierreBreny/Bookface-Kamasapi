@@ -80,7 +80,7 @@ router.post('/login', (req, res, next) => {
                         console.log(value)
                         req.flash('success_msg','You have now registered!')
 
-                    res.redirect('/users/login');
+                    res.redirect('/');
                     })
                     .catch(value=> console.log(value));
                       
