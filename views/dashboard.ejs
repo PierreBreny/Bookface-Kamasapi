@@ -1,4 +1,124 @@
-
+<!-- <!-- 
 <h1 >Dashboard</h1>
 <p> Welcome <%= user.name %></p>
-<a href="/users/logout">Logout</a>
+<a href="/users/logout">Logout</a> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/stylesheets/hall.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header" id="myHeader"> 
+        
+      <div id="nav" class="nav">
+          <div class="row">
+              <div class="logobox">
+              <a href="" class="logo-a">
+                  <img src="/static/images/logo.png" class='logo-icon' alt="">
+                  <p class="kamasapi">KAMASAPI</p>
+              </a>
+            </div>
+
+            
+             <div class="search-bar-wrap">
+                <div class="wrap">
+                    <div class="search">
+                       <input type="text" class="searchTerm" placeholder="Search">
+                       <button type="submit" class="searchButton">
+                         <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                 </div> 
+            </div>
+            <p> Welcome <%= user.name %></p>
+              <div class="menu">
+                  <ul id="nav-menu">
+                     
+                      <li>
+                          <a href="#profile" class="profile">Profile</a>
+  
+                      </li>
+                      <li>
+                          <a href="#logout" class="logout-a">Log out</a>
+  
+                      </li>
+  
+  
+                  </ul>
+              </div>
+
+            
+              
+          </div>
+        </div> 
+        
+
+</div>
+
+
+    <div class="main">
+        <div class="write-post">
+            <h2>Post something</h2>
+            <form class="container" method="post" action="/">
+                <div class="form-group">
+                <input class="form-control" name="title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                <textarea class="form-control" name="content"></textarea> 
+                </div>
+                <button class="post-button">Post</button>
+
+            </form>
+        </div>
+
+
+
+    <%postsList.forEach(post => {%>
+           <div class="post">
+            <div class="user-info">
+                <img src="https://picsum.photos/100" alt="" class="profile-picture">
+                <div class="name-date">
+                    <p class="name"><%= post.name %></p>
+                    <p class="date"><%= post.date %></p>
+                </div>
+            </div>
+            <div class="post-content">
+                <p class="p-title"><%= post.title %></p>
+                <%= post.content %>
+            </div>
+        </div>
+    </div>
+
+       
+        <!-- <p><%= post.title %></p> -->
+        <%})%>
+ 
+        
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+            </script>       
+</body>
+</html> -->
