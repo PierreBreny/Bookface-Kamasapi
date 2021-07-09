@@ -7,6 +7,7 @@ const expressEjsLayout = require('express-ejs-layouts')
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const Post = require("./models/posts");
 
 require('./config/passport')(passport)
 
@@ -18,8 +19,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const UserSchema = require("./models/user");
+const postsSchema = require("./models/posts");
 
-//mongoose
+// mongoose
 mongoose.connect(process.env.DB_CONNECT,{useNewUrlParser: true, useUnifiedTopology : true})
 .then(() => console.log('connected,,'))
 .catch((err)=> console.log(err));
@@ -50,6 +52,34 @@ app.use(passport.session());
 //Routes
 app.use('/',require('./routes/index'));
 app.use('/users',require('./routes/users'));
+
+
+
+
+app.use("/static", express.static("public"));
+
+
+ app.get("/hall", function (req,res) {
+   Post.find({}, function(err, posts) {
+     res.render("hall", {
+       postsList: posts 
+     })
+   }) 
+   
+  })
+
+  
+  
+  
+ app.post("/", function(req, res){
+    let newPost = new Post({
+      title: req.body.title,
+      content: req.body.content
+    });
+    newPost.save();
+    res.redirect('/hall');
+  
+  })
 
 
 
