@@ -20,8 +20,8 @@
           <div class="profile-nav-info">
             <h3 class="user-name"><%= user.name +' '+ user.firstName %></h3>
             <div class="address">
-              <p id="state" class="state">New York,</p>
-              <span id="country" class="country">USA.</span>
+              <p id="state" class="state"><%= user.city,%></p>
+              <span id="country" class="country"><%= user.country %></span>
             </div>
       
           </div>
@@ -36,12 +36,12 @@
         <div class="main-bd">
           <div class="left-side">
             <div class="profile-side">
-              <p class="mobile-no"><i class="fa fa-phone"></i> +23470xxxxx700</p>
+              <!-- <p class="mobile-no"><i class="fa fa-phone"></i> +23470xxxxx700</p> -->
               <p class="user-mail"><i class="fa fa-envelope"></i> <%= user.email %> </p>
               <div class="user-bio">
                 <h3>Bio</h3>
                 <p class="bio">
-                  Lorem ipsum dolor sit amet, hello how consectetur adipisicing elit. Sint consectetur provident magni yohoho consequuntur, voluptatibus ghdfff exercitationem at quis similique. Optio, amet!
+                  <%= user.bio %>
                 </p>
               </div>
               <div class="profile-btn">
