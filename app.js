@@ -20,6 +20,7 @@ dotenv.config();
 
 const UserSchema = require("./models/user");
 const postsSchema = require("./models/posts");
+const { collection } = require('./models/posts');
 
 // mongoose
 mongoose.connect(process.env.DB_CONNECT,{useNewUrlParser: true, useUnifiedTopology : true})
@@ -81,6 +82,23 @@ app.use("/static", express.static("public"));
     res.redirect('/hall');
   
   })
+
+  // app.get("/search", async (request, response) => {
+  //   try {
+  //       let result = await collection.aggregate([
+  //         {
+  //           "$search": {
+  //             "autocomplete": {
+  //               "query": `${request.query.term}`,
+  //               "path": 
+  //             }
+  //           }
+  //         }
+  //       ])
+  //   } catch (e) {
+  //     response.status(500)send({ message: e.message});
+  //   }
+  // });
 
 
 
