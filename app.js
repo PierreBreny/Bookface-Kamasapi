@@ -33,7 +33,7 @@ app.use(expressEjsLayout);
 //BodyParser
 app.use(express.urlencoded({extended : false}));
 //express session
-app.use(session({
+app.use(session({ 
     secret : 'secret',
     resave : true,
     saveUninitialized : true
@@ -83,22 +83,41 @@ app.use("/static", express.static("public"));
   
   })
 
-  // app.get("/search", async (request, response) => {
-  //   try {
-  //       let result = await collection.aggregate([
-  //         {
-  //           "$search": {
-  //             "autocomplete": {
-  //               "query": `${request.query.term}`,
-  //               "path": 
-  //             }
-  //           }
-  //         }
-  //       ])
-  //   } catch (e) {
-  //     response.status(500)send({ message: e.message});
-  //   }
-  // });
+// SEARCH POSTS
+
+// app.get('/posts/search', async (req, res) => {
+//   try {
+//     const { search } = req.query;
+//     const searchedPosts = await Post.find({ content: { $regex: search, $options: 'i' } }).populate('author').exec();
+//     if (searchedPosts) {
+//       res.render('searchPosts.ejs', { searchedPosts });
+//     } else {
+//       req.flash('error', 'The post you are searching for does not exist');
+//       res.redirect('/posts');
+//     }
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
+
+// SEARCH USERS
+
+// app.get('/profiles/search', async (req, res) => {
+//   try {
+//     const { search } = req.query;
+//     const searchedProfiles = await User.find({ username: { $regex: search, $options: 'i' } }).exec();
+//     if (searchedProfiles) {
+//       res.render('searchProfiles.ejs', { searchedProfiles });
+//     } else {
+//       req.flash('error', 'The profile you are searching for does not exist');
+//       res.redirect('/posts');
+//     }
+//   } catch (err) {
+//     console.log(err);
+//   }
+// });
+
+// SERVER
 
 
 
