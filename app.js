@@ -73,32 +73,22 @@ app.use("/static", express.static("public"));
   
   
   
- app.post("/", function(req, res){
+  app.post("/", function(req, res){
+    const {title, content}= req.body;
+    var author= {
+      id: req.user._id,
+      name: req.user.name,
+      username:req.user.name
+    };
     let newPost = new Post({
       title: req.body.title,
-      content: req.body.content
+      content: req.body.content,
+      author:author
     });
     newPost.save();
     res.redirect('/hall');
   
   })
-
-  // app.get("/search", async (request, response) => {
-  //   try {
-  //       let result = await collection.aggregate([
-  //         {
-  //           "$search": {
-  //             "autocomplete": {
-  //               "query": `${request.query.term}`,
-  //               "path": 
-  //             }
-  //           }
-  //         }
-  //       ])
-  //   } catch (e) {
-  //     response.status(500)send({ message: e.message});
-  //   }
-  // });
 
 
 
