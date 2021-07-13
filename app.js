@@ -73,15 +73,23 @@ app.use("/static", express.static("public"));
   
   
   
- app.post("/", function(req, res){
+  app.post("/", function(req, res){
+    const {title, content}= req.body;
+    var author= {
+      id: req.user._id,
+      name: req.user.name,
+      username:req.user.name
+    };
     let newPost = new Post({
       title: req.body.title,
-      content: req.body.content
+      content: req.body.content,
+      author:author
     });
     newPost.save();
     res.redirect('/hall');
   
   })
+
 
 // SEARCH POSTS
 
@@ -118,7 +126,6 @@ app.use("/static", express.static("public"));
 // });
 
 // SERVER
-
 
 
   app.listen(process.env.PORT || 3000, () => console.log("Server Up and running"));
